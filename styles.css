@@ -1,0 +1,124 @@
+/* class selector*/
+.wrapper {
+    background-color: #acacad;
+    width: 80vw;
+    margin: 0 auto;
+    color: #333;
+    border: solid rgb(241, 113, 175);
+  }
+  
+  /* combination selector*/
+  /* header formatting*/
+  
+  .wrapper h2,
+  .wrapper h3 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    background-color: #ffcddf;
+    border: solid #333;
+    background-image: url('./back3.jpeg'); /* set background image*/
+    }
+  .wrapper header {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    width: 90%; /* set width*/
+    background-color: rgb(198, 233, 233); /*sets background color*/
+   align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  
+  /*element selector*/
+  /*paragraph formatting*/
+  p {
+    color: initial;
+    font-size: 2rem;
+    background: radial-gradient(circle, rgba(148,233,202,1) 0%, rgba(238,174,202,1) 100%);
+  }
+  
+  /* id selector*/
+  /*image formatting*/
+  #picture{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 80px;
+ 
+  }
+  #picture img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  /* add filters to image*/
+   img:hover{
+    filter: blur(1px) drop-shadow(18px 18px 16px pink);
+  }
+  /*Descendant Combinator selector*/
+  ul li {
+    font-family: 'Pangolin', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    border: solid black;
+    background-color: #baffc9;
+    list-style-type: square
+  }
+  
+  /* pseudo selector*/
+  ul li:nth-of-type(odd) {
+    font-weight: bold;
+  }
+  
+  /*Descendant Combinator selector*/
+  footer p {
+    text-align: center;
+    font-size: 1rem;
+  
+  }
+  
+  /*to add animation to images*/
+  @keyframes picAnimation {
+    0% {
+      opacity: 0;
+      rotate: 180deg;
+      /*rotate the image*/
+    }
+  
+    100% {
+      opacity: 1;
+      rotate: 360deg;
+    }
+  }
+  
+  #picture img {
+    animation-name: picAnimation;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+  }
+  
+  /* add animation to text - increases font size*/
+  @keyframes textmove {
+    0% {
+      font-size: 1rem;
+    }
+  
+    50% {
+      font-size: 1.5rem;
+    }
+  
+    100% {
+      font-size: 2rem;
+    }
+  }
+  
+  h1,
+  h2,
+  h3 {
+  
+    animation: textmove 4s;
+    /* increases size of text in 4 seconds */
+  }
